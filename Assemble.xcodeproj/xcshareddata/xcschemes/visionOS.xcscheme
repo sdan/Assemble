@@ -17,7 +17,7 @@
                BlueprintIdentifier = "49E09B912AD3237D00B56CD3"
                BuildableName = "Ensemble.app"
                BlueprintName = "visionOS"
-               ReferencedContainer = "container:Ensemble.xcodeproj">
+               ReferencedContainer = "container:Assemble.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "49E09B912AD3237D00B56CD3"
             BuildableName = "Ensemble.app"
             BlueprintName = "visionOS"
-            ReferencedContainer = "container:Ensemble.xcodeproj">
+            ReferencedContainer = "container:Assemble.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "49E09B912AD3237D00B56CD3"
             BuildableName = "Ensemble.app"
             BlueprintName = "visionOS"
-            ReferencedContainer = "container:Ensemble.xcodeproj">
+            ReferencedContainer = "container:Assemble.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

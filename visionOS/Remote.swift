@@ -32,13 +32,13 @@ struct Remote: macOSInterface {
 		try await M.VisionOSHandshake.send(parameters, through: connection)
 	}
 
-	var windows: [Window] {
+	var windows: [Display] {
 		get async throws {
-			try await _windows(parameters: .init()).windows
+			try await _displays(parameters: .init()).displays
 		}
 	}
 
-	func _windows(parameters: M.Windows.Request) async throws -> M.Windows.Reply {
+	func _displays(parameters: M.Windows.Request) async throws -> M.Windows.Reply {
 		try await M.Windows.send(parameters, through: connection)
 	}
 

@@ -12,8 +12,8 @@ protocol visionOSInterface {
 	typealias M = visionOSMessages
 
 	func _handshake(parameters: M.MacOSHandshake.Request) async throws -> M.MacOSHandshake.Reply
-	func _windowFrame(parameters: M.WindowFrame.Request) async throws -> M.WindowFrame.Reply
-	func _childWindows(parameters: M.ChildWindows.Request) async throws -> M.ChildWindows.Reply
+	func _displayFrame(parameters: M.DisplayFrame.Request) async throws -> M.DisplayFrame.Reply
+	func _childDisplays(parameters: M.ChildDisplays.Request) async throws -> M.ChildDisplays.Reply
 }
 
 enum visionOSMessages {
@@ -30,32 +30,32 @@ enum visionOSMessages {
 		}
 	}
 
-	struct WindowFrame: Message {
-		static let id = Messages.windowFrame
+	struct DisplayFrame: Message {
+		static let id = Messages.displayFrame
 
 		struct Request: Serializable {
-			let windowID: Window.ID
+			let displayID: Display.ID
 			let frame: Frame
 
 			func encode() async throws -> Data {
-				return try await windowID.uleb128 + frame.encode()
+				return try await displayID.uleb128 + frame.encode()
 			}
 
 			static func decode(_ data: Data) async throws -> Self {
 				var data = data
-				return try await self.init(windowID: .init(uleb128: &data), frame: .decode(data))
+				return try await self.init(displayID: .init(uleb128: &data), frame: .decode(data))
 			}
 		}
 
 		typealias Reply = SerializableVoid
 	}
 
-	struct ChildWindows: Message {
-		static let id = Messages.childWindows
+	struct ChildDisplays: Message {
+		static let id = Messages.childDisplays
 
 		struct Request: Serializable, Codable {
-			let parent: Window.ID
-			let children: [Window.ID]
+			let parent: Display.ID
+			let children: [Display.ID]
 		}
 
 		typealias Reply = SerializableVoid

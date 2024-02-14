@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct WindowPreviewView: View {
+struct DisplayPreviewView: View {
 	let remote: Remote
-	let window: Window
+	let display: Display
 
 	@Binding
-	var selectedWindow: Window?
+	var selectedDisplay: Display?
 
 	@State
 	var preview: Frame?
 
 	var body: some View {
 		Button(action: {
-			selectedWindow = window
+			selectedDisplay = display
 		}) {
 			VStack(alignment: .leading) {
 				let size = macOSInterface.M.WindowPreview.previewSize
@@ -32,10 +32,10 @@ struct WindowPreviewView: View {
 						}
 					}
 				}.frame(width: size.width, height: size.height)
-				Text(window.app)
+                Text(display.name ?? "Unknown")
 					.font(.title)
 					.lineLimit(1)
-				Text(window.title!)
+                Text(display.name!)
 					.lineLimit(1)
 			}
 		}
@@ -43,7 +43,7 @@ struct WindowPreviewView: View {
 		.task {
 			do {
 				// while true {
-				guard let preview = try await remote.windowPreview(for: window.id) else {
+				guard let preview = try await remote.windowPreview(for: display.displayID) else {
 					return
 				}
 				self.preview = preview

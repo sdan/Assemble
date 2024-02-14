@@ -24,8 +24,8 @@
 		497716902B29260A0048ED18 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977168F2B29260A0048ED18 /* EventView.swift */; };
 		4978BAAC2AD54EDB000C549C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BAAB2AD54EDB000C549C /* Video.swift */; };
 		4978BAAD2AD54EDB000C549C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BAAB2AD54EDB000C549C /* Video.swift */; };
-		4978BAAF2AD55D71000C549C /* WindowPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BAAE2AD55D71000C549C /* WindowPreviewView.swift */; };
-		4978BAB12AD55E8B000C549C /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BAB02AD55E8B000C549C /* WindowView.swift */; };
+		4978BAAF2AD55D71000C549C /* DisplayPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BAAE2AD55D71000C549C /* DisplayPreviewView.swift */; };
+		4978BAB12AD55E8B000C549C /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BAB02AD55E8B000C549C /* DisplayView.swift */; };
 		4989D3402B0B9393005E2E7A /* shut_up_logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 4989D33F2B0B9393005E2E7A /* shut_up_logging.c */; };
 		4989D3412B0B9393005E2E7A /* shut_up_logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 4989D33F2B0B9393005E2E7A /* shut_up_logging.c */; };
 		49B352C72AE53A9300BCE03D /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B352C62AE53A9300BCE03D /* Frame.swift */; };
@@ -58,7 +58,7 @@
 		49E09BCE2AD52D5900B56CD3 /* Multiplexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E09BCC2AD52D5900B56CD3 /* Multiplexer.swift */; };
 		49E09BD02AD52D9F00B56CD3 /* visionOSInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E09BCF2AD52D9F00B56CD3 /* visionOSInterface.swift */; };
 		49E09BD12AD52D9F00B56CD3 /* visionOSInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E09BCF2AD52D9F00B56CD3 /* visionOSInterface.swift */; };
-		49E09BD32AD5390500B56CD3 /* WindowPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E09BD22AD5390500B56CD3 /* WindowPickerView.swift */; };
+		49E09BD32AD5390500B56CD3 /* DisplayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E09BD22AD5390500B56CD3 /* DisplayPickerView.swift */; };
 		49EDAA6E2B28E58A00546EAB /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EDAA6D2B28E58A00546EAB /* Events.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,12 +76,12 @@
 		495E8E3C2AD5E6C500946419 /* SerializableConformances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableConformances.swift; sourceTree = "<group>"; };
 		4977168F2B29260A0048ED18 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		4978BAAB2AD54EDB000C549C /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		4978BAAE2AD55D71000C549C /* WindowPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowPreviewView.swift; sourceTree = "<group>"; };
-		4978BAB02AD55E8B000C549C /* WindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
+		4978BAAE2AD55D71000C549C /* DisplayPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPreviewView.swift; sourceTree = "<group>"; };
+		4978BAB02AD55E8B000C549C /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		4989D33F2B0B9393005E2E7A /* shut_up_logging.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shut_up_logging.c; sourceTree = "<group>"; };
 		49B352C62AE53A9300BCE03D /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		49B352C92AE593C300BCE03D /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
-		49E09B532AD2EE5000B56CD3 /* Ensemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ensemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E09B532AD2EE5000B56CD3 /* Assemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E09B562AD2EE5000B56CD3 /* EnsembleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnsembleApp.swift; sourceTree = "<group>"; };
 		49E09B582AD2EE5000B56CD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49E09B5A2AD2EE5100B56CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		49E09B8A2AD31AB300B56CD3 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		49E09B8B2AD31B4400B56CD3 /* Deployment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Deployment.xcconfig; sourceTree = "<group>"; };
 		49E09B8C2AD320F200B56CD3 /* macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS.xcconfig; sourceTree = "<group>"; };
-		49E09B922AD3237D00B56CD3 /* Ensemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ensemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E09B922AD3237D00B56CD3 /* Assemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E09B982AD3237D00B56CD3 /* EnsembleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnsembleApp.swift; sourceTree = "<group>"; };
 		49E09B9A2AD3237D00B56CD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49E09B9C2AD3237E00B56CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		49E09BCA2AD52D1D00B56CD3 /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
 		49E09BCC2AD52D5900B56CD3 /* Multiplexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplexer.swift; sourceTree = "<group>"; };
 		49E09BCF2AD52D9F00B56CD3 /* visionOSInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visionOSInterface.swift; sourceTree = "<group>"; };
-		49E09BD22AD5390500B56CD3 /* WindowPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowPickerView.swift; sourceTree = "<group>"; };
+		49E09BD22AD5390500B56CD3 /* DisplayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPickerView.swift; sourceTree = "<group>"; };
 		49EDAA6D2B28E58A00546EAB /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,8 +150,8 @@
 		49E09B542AD2EE5000B56CD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49E09B532AD2EE5000B56CD3 /* Ensemble.app */,
-				49E09B922AD3237D00B56CD3 /* Ensemble.app */,
+				49E09B532AD2EE5000B56CD3 /* Assemble.app */,
+				49E09B922AD3237D00B56CD3 /* Assemble.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,9 +210,9 @@
 				49E09BCA2AD52D1D00B56CD3 /* Local.swift */,
 				49E09BC82AD52D1600B56CD3 /* Remote.swift */,
 				49226A322AE45D710044CFC9 /* RootWindowView.swift */,
-				49E09BD22AD5390500B56CD3 /* WindowPickerView.swift */,
-				4978BAAE2AD55D71000C549C /* WindowPreviewView.swift */,
-				4978BAB02AD55E8B000C549C /* WindowView.swift */,
+				49E09BD22AD5390500B56CD3 /* DisplayPickerView.swift */,
+				4978BAAE2AD55D71000C549C /* DisplayPreviewView.swift */,
+				4978BAB02AD55E8B000C549C /* DisplayView.swift */,
 				49E09B9C2AD3237E00B56CD3 /* Assets.xcassets */,
 				49E09B9E2AD3237E00B56CD3 /* Preview Content */,
 			);
@@ -274,7 +274,7 @@
 				49E09BB92AD4F88100B56CD3 /* Cod */,
 			);
 			productName = Ensemble;
-			productReference = 49E09B532AD2EE5000B56CD3 /* Ensemble.app */;
+			productReference = 49E09B532AD2EE5000B56CD3 /* Assemble.app */;
 			productType = "com.apple.product-type.application";
 		};
 		49E09B912AD3237D00B56CD3 /* visionOS */ = {
@@ -295,7 +295,7 @@
 				49E09BBB2AD4F88900B56CD3 /* Cod */,
 			);
 			productName = Ensemble;
-			productReference = 49E09B922AD3237D00B56CD3 /* Ensemble.app */;
+			productReference = 49E09B922AD3237D00B56CD3 /* Assemble.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -318,7 +318,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 49E09B4E2AD2EE5000B56CD3 /* Build configuration list for PBXProject "Ensemble" */;
+			buildConfigurationList = 49E09B4E2AD2EE5000B56CD3 /* Build configuration list for PBXProject "Assemble" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -407,14 +407,14 @@
 				49E09BB12AD3FDCC00B56CD3 /* ConnectionView.swift in Sources */,
 				4901A14D2B7246760040D2EE /* Preference.swift in Sources */,
 				49E09B992AD3237D00B56CD3 /* EnsembleApp.swift in Sources */,
-				4978BAAF2AD55D71000C549C /* WindowPreviewView.swift in Sources */,
+				4978BAAF2AD55D71000C549C /* DisplayPreviewView.swift in Sources */,
 				49E09BC92AD52D1600B56CD3 /* Remote.swift in Sources */,
 				49B352CB2AE593C300BCE03D /* FrameView.swift in Sources */,
 				497716902B29260A0048ED18 /* EventView.swift in Sources */,
-				4978BAB12AD55E8B000C549C /* WindowView.swift in Sources */,
+				4978BAB12AD55E8B000C549C /* DisplayView.swift in Sources */,
 				49E09BB72AD4F84500B56CD3 /* Serializable.swift in Sources */,
 				49E09BCE2AD52D5900B56CD3 /* Multiplexer.swift in Sources */,
-				49E09BD32AD5390500B56CD3 /* WindowPickerView.swift in Sources */,
+				49E09BD32AD5390500B56CD3 /* DisplayPickerView.swift in Sources */,
 				49E09BC32AD52C7800B56CD3 /* macOSInterface.swift in Sources */,
 				49226A332AE45D710044CFC9 /* RootWindowView.swift in Sources */,
 				495E8E3E2AD5E6C500946419 /* SerializableConformances.swift in Sources */,
@@ -443,6 +443,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E09B8C2AD320F200B56CD3 /* macOS.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T6MC325U46;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				PRODUCT_BUNDLE_IDENTIFIER = io.sdan.assemble;
 			};
 			name = Debug;
 		};
@@ -450,6 +453,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E09B8C2AD320F200B56CD3 /* macOS.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T6MC325U46;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				PRODUCT_BUNDLE_IDENTIFIER = io.sdan.assemble;
 			};
 			name = Release;
 		};
@@ -457,6 +463,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E09BA52AD3240E00B56CD3 /* visionOS.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T6MC325U46;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sdan.assemble;
 			};
 			name = Debug;
 		};
@@ -464,13 +472,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E09BA52AD3240E00B56CD3 /* visionOS.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T6MC325U46;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sdan.assemble;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49E09B4E2AD2EE5000B56CD3 /* Build configuration list for PBXProject "Ensemble" */ = {
+		49E09B4E2AD2EE5000B56CD3 /* Build configuration list for PBXProject "Assemble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49E09B602AD2EE5100B56CD3 /* Debug */,

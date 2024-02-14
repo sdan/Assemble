@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct WindowView: View {
+struct DisplayView: View {
 	let remote: Remote
-	let window: Window
+	let window: Display
 
 	@State
 	var frame: Frame?
@@ -29,11 +29,11 @@ struct WindowView: View {
 										for await event in eventView.coordinator.scrollStream {
 											switch event {
 												case .began:
-													_ = try await remote._scrollBegan(parameters: .init(windowID: window.windowID))
+													_ = try await remote._scrollBegan(parameters: .init(windowID: window.displayID))
 												case .changed(let translation):
-													_ = try await remote._scrollChanged(parameters: .init(windowID: window.windowID, x: translation.x, y: translation.y))
+													_ = try await remote._scrollChanged(parameters: .init(windowID: window.displayID, x: translation.x, y: translation.y))
 												case .ended:
-													_ = try await remote._scrollEnded(parameters: .init(windowID: window.windowID))
+													_ = try await remote._scrollEnded(parameters: .init(windowID: window.displayID))
 											}
 										}
 									} catch {}
@@ -43,11 +43,11 @@ struct WindowView: View {
 										for await event in eventView.coordinator.dragStream {
 											switch event {
 												case .began(let translation):
-													_ = try await remote._dragBegan(parameters: .init(windowID: window.windowID, x: translation.x, y: translation.y))
+													_ = try await remote._dragBegan(parameters: .init(windowID: window.displayID, x: translation.x, y: translation.y))
 												case .changed(let translation):
-													_ = try await remote._dragChanged(parameters: .init(windowID: window.windowID, x: translation.x, y: translation.y))
+													_ = try await remote._dragChanged(parameters: .init(windowID: window.displayID, x: translation.x, y: translation.y))
 												case .ended(let translation):
-													_ = try await remote._dragEnded(parameters: .init(windowID: window.windowID, x: translation.x, y: translation.y))
+													_ = try await remote._dragEnded(parameters: .init(windowID: window.displayID, x: translation.x, y: translation.y))
 											}
 										}
 									} catch {}
@@ -55,7 +55,7 @@ struct WindowView: View {
 								.task {
 									do {
 										for await (key, down) in eventView.view.keyStream {
-											_ = try await remote._typed(parameters: .init(windowID: window.windowID, key: key, down: down))
+											_ = try await remote._typed(parameters: .init(windowID: window.displayID, key: key, down: down))
 										}
 									} catch {}
 								}
@@ -63,7 +63,7 @@ struct WindowView: View {
 						.onTapGesture { location in
 							eventView.view.becomeFirstResponder()
 							Task {
-								_ = try await remote._clicked(parameters: .init(windowID: window.windowID, x: location.x / geometry.size.width, y: location.y / geometry.size.height))
+								_ = try await remote._clicked(parameters: .init(windowID: window.displayID, x: location.x / geometry.size.width, y: location.y / geometry.size.height))
 							}
 						}
 						.onContinuousHover(coordinateSpace: .local) {
@@ -71,7 +71,7 @@ struct WindowView: View {
 								case .active(let location):
 									Task {
 										do {
-											_ = try await remote._mouseMoved(parameters: .init(windowID: window.windowID, x: location.x / geometry.size.width, y: location.y / geometry.size.height))
+											_ = try await remote._mouseMoved(parameters: .init(windowID: window.displayID, x: location.x / geometry.size.width, y: location.y / geometry.size.height))
 										} catch {}
 									}
 								default:
@@ -88,7 +88,7 @@ struct WindowView: View {
 		}
 		.task {
 			do {
-				for await frame in try await remote.startCasting(for: window.windowID) {
+				for await frame in try await remote.startCasting(for: window.displayID) {
 					self.frame = frame
 				}
 			} catch {}

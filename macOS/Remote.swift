@@ -32,19 +32,19 @@ struct Remote: visionOSInterface {
 		try await M.MacOSHandshake.send(parameters, through: connection)
 	}
 
-	func windowFrame(forWindowID windowID: CGWindowID, frame: Frame) async throws {
-		_ = try await _windowFrame(parameters: .init(windowID: windowID, frame: frame))
+	func displayFrame(forDisplayID displayID: CGDirectDisplayID, frame: Frame) async throws {
+		_ = try await _displayFrame(parameters: .init(displayID: displayID, frame: frame))
 	}
 
-	func _windowFrame(parameters: M.WindowFrame.Request) async throws -> M.WindowFrame.Reply {
-		try await M.WindowFrame.send(parameters, through: connection)
+	func _displayFrame(parameters: M.DisplayFrame.Request) async throws -> M.DisplayFrame.Reply {
+		try await M.DisplayFrame.send(parameters, through: connection)
 	}
 
-	func childWindows(parent: CGWindowID, children: [CGWindowID]) async throws {
-		_ = try await _childWindows(parameters: .init(parent: parent, children: children))
+	func childDisplays(parent: CGDirectDisplayID, children: [CGDirectDisplayID]) async throws {
+		_ = try await _childDisplays(parameters: .init(parent: parent, children: children))
 	}
 
-	func _childWindows(parameters: M.ChildWindows.Request) async throws -> M.ChildWindows.Reply {
-		try await M.ChildWindows.send(parameters, through: connection)
+	func _childDisplays(parameters: M.ChildDisplays.Request) async throws -> M.ChildDisplays.Reply {
+		try await M.ChildDisplays.send(parameters, through: connection)
 	}
 }

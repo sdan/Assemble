@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RootWindowView: View {
 	let remote: Remote
-	let window: Window
+	let window: Display
 
 
 	@State
@@ -21,7 +21,7 @@ struct RootWindowView: View {
 			let actual = AVMakeRect(aspectRatio: window.frame.size, insideRect: CGRect(origin: .zero, size: geometry.size)).size
 
 			ZStack {
-				WindowView(remote: remote, window: window)
+				DisplayView(remote: remote, window: window)
 				ForEach(children) { child in
 					let width = child.frame.width / window.frame.width * actual.width
 					let height = child.frame.height / window.frame.height * actual.height

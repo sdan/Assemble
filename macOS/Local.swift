@@ -105,6 +105,8 @@ class Local: LocalInterface, macOSInterface {
 	func _handshake(parameters: M.VisionOSHandshake.Request) async throws -> M.VisionOSHandshake.Reply {
 		return .init(version: Messages.version, name: SCDynamicStoreCopyComputerName(nil, nil)! as String)
 	}
+    
+    
 
 	func _windows(parameters: M.Windows.Request) async throws -> M.Windows.Reply {
 		return try await .init(
@@ -119,7 +121,7 @@ class Local: LocalInterface, macOSInterface {
 	}
 
 	func _windowPreview(parameters: M.WindowPreview.Request) async throws -> M.WindowPreview.Reply {
-		guard let window = try await screenRecorder.lookup(windowID: parameters.windowID),
+		guard let window = try await screenRecorder.lookup(displayID: parameters.displayID),
 			window.isOnScreen,
 			let screenshot = try await screenRecorder.screenshot(window: window, size: M.WindowPreview.previewSize)
 		else {
@@ -130,7 +132,7 @@ class Local: LocalInterface, macOSInterface {
 	}
 
 	func _startCasting(parameters: M.StartCasting.Request) async throws -> M.StartCasting.Reply {
-		let window = try await screenRecorder.lookup(windowID: parameters.windowID)!
+		let window = try await screenRecorder.lookup(displayID: parameters.displayID)!
 		let stream = try await screenRecorder.stream(window: window)
 
 		Task {
